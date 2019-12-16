@@ -1,0 +1,3 @@
+include ':app', ':expandablerecyclerview', ':expandablecheckrecyclerview'
+
+rootProject.name='expandable_recycler_view'
