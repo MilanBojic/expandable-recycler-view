@@ -12,41 +12,49 @@ class MainActivity : AppCompatActivity() {
     lateinit var adapter: GroupAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-        val listOfContact = arrayListOf(
-            Contact("milan"),
-            Contact("pero"),
-            Contact("nikica"),
-            Contact("mikica"),
-            Contact("ldap")
+        val listOfIT = arrayListOf(
+            Person("Vernon M. Solano"),
+            Person("Harley D. Patterson"),
+            Person("Ray K. Hernandez"),
+            Person("Patricia F. Jimenez"),
+            Person("Valerie D. Striplin")
         )
-        val listOfContact2 = arrayListOf(
-            Contact("milan2"),
-            Contact("pero2"),
-            Contact("nikica2"),
-            Contact("mikica2"),
-            Contact("ldap2")
+        val listOfDev = arrayListOf(
+            Person("George A. Perry"),
+            Person("Tara G. Rick"),
+            Person("Rosario G. Schmid"),
+            Person("Brett P. Austin"),
+            Person("Julie E. Stevenson")
         )
-        val listOfContact3 = arrayListOf(
-            Contact("milan3"),
-            Contact("pero3"),
-            Contact("nikica3"),
-            Contact("mikica3"),
-            Contact("ldap3")
+        val listOfManagements = arrayListOf(
+            Person("David M. Clark"),
+            Person("Jeffrey L. Stout"),
+            Person("Theresa C. Jackson"),
+            Person("Ben L. Hayes"),
+            Person("Lydia J. Thompson")
         )
-        val listOfGroup = arrayListOf(
-            Group("grupa1", listOfContact),
-            Group("grupa2", listOfContact2),
-            Group("grupa3", listOfContact3),
-            Group("grupa4", listOfContact),
-            Group("grupa5", listOfContact2)
+
+        val listOfQA = arrayListOf(
+            Person("Rachel R. Howell"),
+            Person("Ned A. Seibold"),
+            Person("Thomas B. Blevins"),
+            Person("Christopher D. Bentley"),
+            Person("Glenn E. Alvarado")
+        )
+        val listOfManufacturer = arrayListOf(
+            Group("IT support", listOfIT, R.drawable.support),
+            Group("Developers", listOfDev, R.drawable.dev),
+            Group("Management", listOfManagements, R.drawable.management),
+            Group("QA", listOfQA, R.drawable.qa)
         )
 
 
         setContentView(R.layout.activity_main)
         recyclerView = findViewById(R.id.recycler_view_main) as RecyclerView
         val layoutManager = LinearLayoutManager(this)
-        adapter = GroupAdapter(listOfGroup)
+        adapter = GroupAdapter(listOfManufacturer)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
 

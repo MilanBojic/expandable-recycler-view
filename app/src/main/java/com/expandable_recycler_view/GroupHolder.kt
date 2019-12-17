@@ -10,12 +10,15 @@ import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup
 import com.thoughtbot.expandablerecyclerview.sample.Group
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder
 
-class GroupViewHolderMy(itemView: View) : GroupViewHolder(itemView) {
 
+class GroupHolder(itemView: View) : GroupViewHolder(itemView) {
+
+    private val groupIcon: ImageView
     private val groupName: TextView
     private val arrow: ImageView
 
     init {
+        groupIcon = itemView.findViewById(R.id.group_item_icon) as ImageView
         groupName = itemView.findViewById(R.id.group_item_name) as TextView
         arrow = itemView.findViewById(R.id.group_item_arrow) as ImageView
     }
@@ -25,6 +28,11 @@ class GroupViewHolderMy(itemView: View) : GroupViewHolder(itemView) {
             groupName.setText(group.title)
         }
     }
+
+    fun setIcon(group: ExpandableGroup<*>) {
+        groupIcon.setImageResource((group as Group).iconResId)
+    }
+
 
     override fun expand() {
         animateExpand()
@@ -48,3 +56,5 @@ class GroupViewHolderMy(itemView: View) : GroupViewHolder(itemView) {
         arrow.animation = rotate
     }
 }
+
+

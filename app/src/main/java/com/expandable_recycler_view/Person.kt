@@ -1,11 +1,10 @@
 package com.expandable_recycler_view
 
-import android.annotation.SuppressLint
 import android.os.Parcel
 import android.os.Parcelable
 
 
-class Contact : Parcelable {
+class Person : Parcelable {
 
     var name: String? = null
         private set
@@ -21,16 +20,16 @@ class Contact : Parcelable {
 
     override fun equals(o: Any?): Boolean {
         if (this === o) return true
-        if (o !is Contact) return false
+        if (o !is Person) return false
 
-        val contact = o as Contact?
+        val contact = o as Person?
 
         return if (name != null) name == contact?.name else contact?.name == null
 
     }
 
     override fun hashCode(): Int {
-        var result = if (name != null) name!!.hashCode() else 0
+        val result = if (name != null) name!!.hashCode() else 0
         return result
     }
 
@@ -42,17 +41,13 @@ class Contact : Parcelable {
         return 0
     }
 
-    companion object {
+    companion object CREATOR : Parcelable.Creator<Person> {
+        override fun createFromParcel(parcel: Parcel): Person {
+            return Person(parcel)
+        }
 
-        @SuppressLint("ParcelCreator")
-        val CREATOR: Parcelable.Creator<Contact> = object : Parcelable.Creator<Contact> {
-            override fun createFromParcel(`in`: Parcel): Contact {
-                return Contact(`in`)
-            }
-
-            override fun newArray(size: Int): Array<Contact?> {
-                return arrayOfNulls(size)
-            }
+        override fun newArray(size: Int): Array<Person?> {
+            return arrayOfNulls(size)
         }
     }
 
