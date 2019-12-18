@@ -20,7 +20,7 @@ Android Studio 3.0 (to compile and use)
   
 
 ## Very easy to use:
-For a example, you have different group where each group has a list of persons.
+For a example, you have different groups where each group has a list of persons.
 
 First, define your custom **ExpandableGroup class:**
 
