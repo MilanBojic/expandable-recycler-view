@@ -20,16 +20,15 @@ Android Studio 3.0 (to compile and use)
   
 
 ## Very easy to use:
-for a example, you have different group where each group has a list of person.
+For a example, you have different group where each group has a list of persons.
 
+First, define your custom **ExpandableGroup class:**
 
+**class Group(title: String, items: List<Person>, val iconResId: Int) :
+    **ExpandableGroup**<Person>(title, items) {}**
 
-First, define your custom ##ExpandableGroup class:
-
-class **Group**(title: String, items: List<Person>, val iconResId: Int) :
-    **ExpandableGroup**<Person>(title, items) {}
-
-Next up, let's create the **ChildViewHolder** and **ParentViewHolder**. These are both wrappers around regular ol' **RecyclerView.ViewHolders** so implement any view inflation and binding methods you may need.
+Next up, let's create the **ChildViewHolder** and **ParentViewHolder**. 
+These are both wrappers around regular **RecyclerView.ViewHolders** so implement any view inflation and binding methods you may need.
 
 **class GroupHolder(itemView: View) : GroupViewHolder(itemView) {}**
 
