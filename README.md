@@ -37,7 +37,7 @@ These are both wrappers around regular **RecyclerView.ViewHolders** so implement
 
 Now we are ready create adapter  - let's make our ExpandableRecyclerViewAdapter
 
-***class GroupAdapter(groups: List<ExpandableGroup<*>>) : ExpandableRecyclerViewAdapter<GroupHolder, PersonViewHolder>(groups) {***
+***class GroupAdapter(groups: List<ExpandableGroup<>>) : ExpandableRecyclerViewAdapter<GroupHolder, PersonViewHolder>(groups) {***
 
     override fun onCreateGroupViewHolder(parent: ViewGroup, viewType: Int): GroupHolder {
         val view = LayoutInflater.from(parent.context)
