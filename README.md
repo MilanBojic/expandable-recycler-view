@@ -5,7 +5,7 @@ Make an expandable list view by RecyclerView with support for multiple view type
 
 
 
-I will present a third-party library developed by [ThoughtBot](https://https://thoughtbot.com/blog/), which I think it's the best to this time, which providing us a full-featured expandable list view
+I will present a third-party library developed by [ThoughtBot](https://thoughtbot.com/blog/), which I think it's the best to this time, which providing us a full-featured expandable list view
 
 
 ## Requirements
