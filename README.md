@@ -24,20 +24,20 @@ For a example, you have different group where each group has a list of persons.
 
 First, define your custom **ExpandableGroup class:**
 
-**class Group(title: String, items: List<Person>, val iconResId: Int) :
-    **ExpandableGroup**<Person>(title, items) {}**
+***class Group(title: String, items: List<Person>, val iconResId: Int) :
+    **ExpandableGroup**<Person>(title, items) {}***
 
 Next up, let's create the **ChildViewHolder** and **ParentViewHolder**. 
 These are both wrappers around regular **RecyclerView.ViewHolders** so implement any view inflation and binding methods you may need.
 
-**class GroupHolder(itemView: View) : GroupViewHolder(itemView) {}**
+***class GroupHolder(itemView: View) : GroupViewHolder(itemView) {}***
 
-**class PersonViewHolder(itemView: View) : ChildViewHolder(itemView) {}**
+***class PersonViewHolder(itemView: View) : ChildViewHolder(itemView) {}***
 
 
 Now we are ready create adapter  - let's make our ExpandableRecyclerViewAdapter
 
-**class GroupAdapter(groups: List<ExpandableGroup<*>>) : ExpandableRecyclerViewAdapter<GroupHolder, PersonViewHolder>(groups) {**
+***class GroupAdapter(groups: List<ExpandableGroup<*>>) : ExpandableRecyclerViewAdapter<GroupHolder, PersonViewHolder>(groups) {***
 
     override fun onCreateGroupViewHolder(parent: ViewGroup, viewType: Int): GroupHolder {
         val view = LayoutInflater.from(parent.context)
