@@ -3,7 +3,9 @@
 ## What is this?
 Make an expandable list view by RecyclerView with support for multiple view types in Android.
 
-I will present a third-party library developed by ThoughtBot, Inc which I think it's the best to this time, which providing us a full-featured expandable list view
+
+
+I will present a third-party library developed by [ThoughtBot](https://https://thoughtbot.com/blog/), which I think it's the best to this time, which providing us a full-featured expandable list view
 
 
 ## Requirements
