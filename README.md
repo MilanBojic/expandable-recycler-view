@@ -22,7 +22,7 @@ Android Studio 3.0 (to compile and use)
  
 ## What does it look like?
 
-![test image size](https://github.com/MilanBojic/introduction-to-retrofit/blob/master/image1.png)
+![test image size](https://github.com/MilanBojic/expandable_recycler_view/blob/master/1.gif)
 
 
 
